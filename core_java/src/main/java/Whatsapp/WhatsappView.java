@@ -19,15 +19,15 @@ public class WhatsappView { // if class will not be public then we can not use t
 			System.out.println("press 3 to edit profile");
 			System.out.println("press 4 to login profile");
 			System.out.println("press 5 to delete profile");
-			 System.out.println("Press 6 to search for profile");
+			System.out.println("Press 6 to search for profile");
+			System.out.println("Press 7 to reset the account");
+			
 			
 			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 			System.out.println("enter your choice");
-			String a = br.readLine();
-			
-			int c = Integer.parseInt(a);
+			int ch =Integer.parseInt(br.readLine());
 
-			switch (c) {
+			switch (ch) {
 			case 1:
 				w.createProfile();
 				break;
@@ -46,6 +46,9 @@ public class WhatsappView { // if class will not be public then we can not use t
 			case 6:
 				w.searchProfile();
 				break;
+			case 7:
+				w.resetProfile();
+				break;	
 			default:
 				System.out.println("invalid case");
 				break;

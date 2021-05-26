@@ -8,11 +8,6 @@ public class Controllor {
 	static String email;
 	static String address;
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
 	public void createProfile() throws Exception {
 	
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));

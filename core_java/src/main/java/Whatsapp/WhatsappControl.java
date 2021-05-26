@@ -3,10 +3,11 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 public class WhatsappControl {
 
-	private String name;
-	private String pass;
-	private String email;
-	private String address;
+	static String name;
+	static String pass;
+	static String email;
+	static String address;
+	static String security;
 	
 	
 	public void createProfile()throws Exception {
@@ -22,6 +23,11 @@ public class WhatsappControl {
 		
 		System.out.println("enter address ");
 		 address=br.readLine();
+		 
+
+	    System.out.println("***security Question***");
+	    System.out.println("enter your pet name");
+	      security=br.readLine();
 		 System.out.println("*****Thank YOU   "+name+"   *****");
 		
 		 
@@ -30,6 +36,8 @@ public class WhatsappControl {
 			System.out.println("password : "+pass);
 			System.out.println("Email : "+email);
 			System.out.println("Address : "+address);
+			System.out.println("security answer : "+security);
+
 			
 		
 		
@@ -48,6 +56,7 @@ public class WhatsappControl {
 		pass="";
 		email="";
 		address="";
+		security="";
 		
 		System.out.println("profile deleted");
 	}
@@ -58,9 +67,10 @@ public class WhatsappControl {
 		System.out.println("password : "+pass);
 		System.out.println("Email : "+email);
 		System.out.println("Address : "+address);	
+		System.out.println("security answer : "+security);
 		
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-		System.out.println("Enter 1 for name 2 for password 3 for mail 4 for adress  ");
+		System.out.println("Enter 1 for name 2 for password 3 for mail 4 for adress 5 for security que  ");
         int ch=Integer.parseInt(br.readLine());
         
 		switch(ch) {
@@ -76,6 +86,10 @@ public class WhatsappControl {
 		case 4: System.out.println("Enter Address ");
                  address=br.readLine();
 	           break;
+		case 5:  System.out.println("SECURITY QUESTION  : enter your pet name");
+				System.out.println("Enter Security answer ");
+               security=br.readLine();
+      break;
 	    default: System.out.println("Invalid Choice");
                break;       
 		}
@@ -122,4 +136,24 @@ public class WhatsappControl {
 
 
 }
+	public void resetProfile() throws Exception {
+	     
+		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+	    System.out.println("***security question*** ");
+	    System.out.println("enter your pet name");
+	    String input1=br.readLine();
+	    if(security.equals(input1)) {
+	        System.out.println("Account Reset Successful");
+	        System.out.println("Enter New Password");
+	        pass =br.readLine();
+	        System.out.println("New Password is : "+pass);
+	        
+	    }
+	    else {
+	    	System.out.println("Invalid Answer");
+		}
+
+
+		
+	}
 }

@@ -31,7 +31,7 @@ public class FacebookView {
 		           break;
 			case 4:f.deleteProfile();
 		           break;
-			case 5:f.searchrofile();
+			case 5:f.searchProfile();
 		           break;
 		    default: System.out.println("Wrong Choice");   
 			}

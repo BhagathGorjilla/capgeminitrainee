@@ -84,24 +84,28 @@ public class WhatsappControl {
 	
 	public void loginProfile() throws Exception {
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-           System.out.println("Enter Name ");
+		int i=3;
+           while(i!=0) {
+		   System.out.println("Enter Name ");
            String input1=br.readLine();
            System.out.println("Enter Password");
            String input2=br.readLine();
-           int i=3;
-           	if(i>0) {
+           
             if((input1.equals(name)) &&(input2.equals(pass))) {
             	System.out.println("Logged in Successfully");
+            	break;
             }
             else {
-            	i--;
+            	i=i-1;
             	System.out.println("Invalid Username Or Password");
             	System.out.println("Attempts Remaining:"+i);
             }
             
-           	}	
-           	else
-           		System.out.println("Attempts Excluded");
+          
+           }
+           if(i==0) {
+           	System.out.println("Attempts Excluded");
+           }
            }
 	public void searchProfile() throws Exception {
 		

@@ -108,11 +108,7 @@ public class FacebookControl {
 		}
 		
 	}
-	public void searchrofile() {
-		// TODO Auto-generated method stub
-		
-	}
-
+	
 	
 
 	

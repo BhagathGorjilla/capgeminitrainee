@@ -139,7 +139,7 @@ public class WhatsappControl {
 	public void resetProfile() throws Exception {
 	     
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-	    System.out.println("***security question*** ");
+	    System.out.println("***security question ");
 	    System.out.println("enter your pet name");
 	    String input1=br.readLine();
 	    if(security.equals(input1)) {

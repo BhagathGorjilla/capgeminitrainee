@@ -9,16 +9,12 @@ public class Fibonacci {
 	static BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 	
 	
-     public static void fib(int r){
+     public int fib(int r) 
+         {
+		return r;
+    
+    	 }
     	 
-    	 a3=a1+a2;
-    	 a1=a2;
-    	 a2=a3;
-    	 if(a3<=r) {
-    	 System.out.print(a3+" ");
-    	 fib(r);
-    	 }
-    	 }
     	
      
      
@@ -46,9 +42,16 @@ public class Fibonacci {
 		System.out.println();
 		System.out.print("Enter Range: ");
 		int r=Integer.parseInt(br.readLine());
+		Fibonacci f=new Fibonacci();
 		System.out.println("WITH RECURSION: ");
-		System.out.print(a1+"  "+a2+" ");
-		fib(r);
+		System.out.print(a1+"  "+a2+"");
+		while(a3<=r) {
+			a3=a1+a2;
+			if(a3<=r)
+			 System.out.print("   "+f.fib(a3));
+			a1=a2;
+			a2=a3;
+		}
 	}
 	
 }

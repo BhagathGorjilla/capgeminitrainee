@@ -11,11 +11,10 @@ public class Diff {
 		int number=sc.nextInt();
 		 
 		    String str = String.valueOf(number);
-		    char ch = 0;
 		    int length=str.length();
 
 		    for (int i = 0; i < str.length() - 1; i++) {
-		        ch = str.charAt(i);  
+		        char ch = str.charAt(i);  
 		        int di = Character.getNumericValue(ch);
 		        char ch2 = str.charAt(i + 1);
 		        int di2 = Character.getNumericValue(ch2);

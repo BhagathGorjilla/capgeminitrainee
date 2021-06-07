@@ -6,7 +6,7 @@ public class Integersum {
 
 	public static void main(String[] args) throws Exception{
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-		System.out.print("Enter a String : ");
+		System.out.print("Enter a Integer String : ");
 		String s=br.readLine();
 		int sum=0;
 		

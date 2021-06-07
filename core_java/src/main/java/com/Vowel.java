@@ -16,7 +16,8 @@ public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Enter the word : ");
 		String str = br.readLine().toLowerCase();
-		System.out.println(alterString(str.toCharArray()));
+		char[] str1=str.toCharArray();
+		System.out.println(alterString(str1));
 	}
 
 	private static String alterString(char[] str) {

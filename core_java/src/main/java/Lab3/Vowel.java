@@ -5,10 +5,10 @@ import java.io.*;
 public class Vowel {
 	
 private static boolean isVowel(char ch) {
-		if (ch != 'a' && ch != 'e' && ch != 'i' && ch != 'o' && ch != 'u') {
-			return false;
+		if (ch == 'a' || ch == 'e' || ch =='i' || ch == 'o' || ch == 'u') {
+			return true;
 		} 
-		return true;
+		return false;
 		
 }	
 

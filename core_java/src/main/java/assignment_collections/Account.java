@@ -6,6 +6,13 @@ public class Account implements Comparable<Account>{
 	private double balance;
 	
  
+
+
+@Override
+	public String toString() {
+		return "Account [id=" + id + ", name=" + name + ", balance=" + balance + "]";
+	}
+
 public int getId() {
 	return id;
 }

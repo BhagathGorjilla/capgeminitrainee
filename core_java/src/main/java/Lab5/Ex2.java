@@ -1,5 +1,8 @@
 package Lab5;
-//import Lab5.InvalidNameException;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+
 public class Ex2 {
 	private static String Firstname;
 	private static String Lastname;
@@ -8,8 +11,8 @@ public class Ex2 {
 		super();
 		this.Firstname=Firstname;
 		this.Lastname=Lastname;
-		System.out.print(Firstname+ Lastname);
 	}
+	
 	public static String getFirstname() {
 		return Firstname;
 	}
@@ -22,11 +25,18 @@ public class Ex2 {
 	public static void setLastname(String lastname) {
 		
 	}
-	public static void main(String[] args) {
-		Ex2 e=new Ex2("BG","HS");
+	public static void main(String[] args) throws Exception {
+		BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("Enter First Name : ");
+		String FN=br.readLine();
+		System.out.println("Enter Last Name : ");
+		String LN=br.readLine();
 		
 		
-		if(Firstname.contentEquals(" ") || Lastname.equals(" "))
+		Ex2 e=new Ex2(FN,LN);
+		
+		
+		if(Firstname.contentEquals("") || Lastname.equals(""))
 		{
 			throw new InvalidNameException();
 		}

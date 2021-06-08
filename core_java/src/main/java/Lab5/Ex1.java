@@ -1,7 +1,8 @@
 package Lab5;
+import java.util.Scanner;
 
 public class Ex1 {
-	static int Age;
+	private int Age;
 	
 	 
 	public Ex1(int Age) {
@@ -14,22 +15,23 @@ public class Ex1 {
 	}
 
 	public void setAge(int age) {
-		Age = age;
+		if(age>15) {
+			this.Age=age;
+			System.out.println("AGE : "+age);
+			System.out.println("AGE is Valid");
+	     }
+		else 
+			throw new InvalidAgeException();
 	}
 
 	
 
 	public static void main(String[] args) {
-		
-		if(Age>15) {
-			System.out.println("AGE is Valid");
-		     }
-		else 
-			throw new InvalidAgeException();
-		
-		
-	    Ex1 a=new Ex1(0);
-		a.setAge(20);
+		System.out.print("Enter Age  :  ");
+		Scanner sc = new Scanner(System.in);
+		int i=sc.nextInt();
+		Ex1 a=new Ex1(0);
+		a.setAge(i);
 
 	}
 

@@ -10,7 +10,7 @@ public class User {
 		
 		for(Animals a:arr) 
 		{
-			a.talk();
+			 a.talk();
              a.respirate();
            System.out.println();
 		}

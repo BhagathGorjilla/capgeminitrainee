@@ -1,8 +1,10 @@
-package com;
+package assignment_collections;
 
 import java.util.Comparator;
 
-public class Idcomparator implements Comparator<Employee> {
+import com.Employee;
+
+public class Idcomparator1 implements Comparator<Employee> {
 
 	@Override
 	public int compare(Employee o1, Employee o2) {

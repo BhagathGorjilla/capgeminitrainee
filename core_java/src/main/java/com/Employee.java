@@ -70,7 +70,7 @@ public static void main(String[] Args) {
 	
 	//This method only uses ID comparator for sorting
 	System.out.println("*****Sorting based on ID using new Comparator Class*****");
-	Collections.sort(list,new Idcomparator());
+	Collections.sort(list,new Idcomparator1());
 	System.out.println(list);
 	
 }
